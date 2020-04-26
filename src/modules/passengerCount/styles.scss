@@ -1,0 +1,40 @@
+.count-main-page {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+  &-header {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4d4d4d;
+  }
+  &-container {
+    padding-top: 30px;
+    width: 80%;
+    .form-input {
+      border: 1px solid #e6e6e6 !important;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    &-label {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #4d4d4d;
+      text-align: right;
+      margin-right: 100px;
+    }
+    &-button {
+      width: fit-content;
+      margin: 10px 0px 10px auto;
+    }
+  }
+  &-prediction {
+    background-color: #505050af;
+    border-radius: 20px;
+    padding: 20px 30px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+}

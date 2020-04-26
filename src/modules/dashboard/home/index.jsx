@@ -3,9 +3,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import Layout from "components/layout";
-import Link from "components/Link";
 
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 type HomePageProps = {
   user: Object,
@@ -13,32 +13,9 @@ type HomePageProps = {
 
 class HomePage extends Component<HomePageProps> {
   render() {
-    const {
-      user: { role },
-    } = this.props;
     return (
       <Layout>
-        <div className="main-page">
-          <div className="main-page-links">
-            {role === "Admin" && (
-              <Link to={"cashier"}>
-                <div className="main-page-links-item">Cashier Management</div>
-              </Link>
-            )}
-            {(role === "Admin" || role === "Store Keeper") && (
-              <Link to={"product/create"}>
-                <div className="main-page-links-item">Stock Management</div>
-              </Link>
-            )}
-            {(role === "Admin" ||
-              role === "Store Keeper" ||
-              role === "Cashier") && (
-              <Link to={"admin/product/create"}>
-                <div className="main-page-links-item">Admin Management</div>
-              </Link>
-            )}
-          </div>
-        </div>
+        <div></div>
       </Layout>
     );
   }

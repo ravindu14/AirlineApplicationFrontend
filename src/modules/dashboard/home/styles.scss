@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  .header-main-page {
+    background-color: red($color: #000000);
+  }
   &-links {
     height: 400px;
     width: 600px;

@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import Sidebar from "components/mainSideBar";
+import Sidebar from "components/sidebar";
 import Header from "components/header";
 
 import "./styles.scss";
@@ -9,18 +9,18 @@ type LayoutProps = {
   children: Element,
   breadcrumbs?: String[],
   actions?: Element,
-  status?: string
+  status?: string,
 };
 
 export default function layout({
   children,
   breadcrumbs,
   actions,
-  status
+  status,
 }: LayoutProps) {
   const breadcrumbsContent =
     breadcrumbs !== undefined
-      ? breadcrumbs.map(breadcrumb => <li key={breadcrumb}>{breadcrumb}</li>)
+      ? breadcrumbs.map((breadcrumb) => <li key={breadcrumb}>{breadcrumb}</li>)
       : null;
 
   return (

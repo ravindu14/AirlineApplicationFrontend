@@ -14,21 +14,35 @@ export default function sidebar() {
         </Link>
       </div>
       <div className="menu">
+        <SubMenu title="Dashboard" icon="meter" onClick="/" />
         <SubMenu
-          title="Inventory"
-          icon="inventory"
+          title="Passenger Count"
+          icon="person"
           items={[
-            { title: "Add New Product", link: "/product/create" },
-            { title: "Update Product", link: "/product/update" },
-            { title: "Set Margin", link: "/product/margin" }
+            {
+              title: "Predict Count",
+              link: "/passenger/passengerCount",
+            },
+            {
+              title: "View History",
+              link: "/passenger/viewPassengerHistory",
+            },
           ]}
         />
         <SubMenu
-          title="Return Stocks"
+          title="No show passengers"
+          icon="bag"
+          items={[
+            { title: "Predict Count", link: "/noshow/passengerCount" },
+            { title: "View History", link: "/noshow/viewPassengerHistory" },
+          ]}
+        />
+        <SubMenu
+          title="Ticket prices"
           icon="money"
           items={[
-            { title: "Create Stock Return", link: "/return/create" },
-            { title: "View Returns", link: "/returns" }
+            { title: "Predict Count", link: "/prices/passengerCount" },
+            { title: "View History", link: "/prices/viewPassengerHistory" },
           ]}
         />
       </div>
