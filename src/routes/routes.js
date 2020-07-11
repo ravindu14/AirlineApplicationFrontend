@@ -29,5 +29,37 @@ export default [
       import("modules/passengerCount/viewPassengerCountHistory")
     ),
   },
+  {
+    path: "/passenger/noShowPassengerCount",
+    exact: true,
+    auth: true,
+    roles: [USER_ROLES.ADMIN],
+    component: lazy(() =>
+      import("modules/noShowPassenger/noShowPassengerCount")
+    ),
+  },
+  {
+    path: "/passenger/viewNoShowPassengerHistory",
+    exact: true,
+    auth: true,
+    roles: [USER_ROLES.ADMIN],
+    component: lazy(() =>
+      import("modules/noShowPassenger/viewNoShowPassengerHistory")
+    ),
+  },
+  {
+    path: "/passenger/ticketPricing",
+    exact: true,
+    auth: true,
+    roles: [USER_ROLES.ADMIN],
+    component: lazy(() => import("modules/ticketPricing/predictTicketPrice")),
+  },
+  {
+    path: "/passenger/viewTicketPricing",
+    exact: true,
+    auth: true,
+    roles: [USER_ROLES.ADMIN],
+    component: lazy(() => import("modules/ticketPricing/viewPricingHistory")),
+  },
   ...authRoutes,
 ];

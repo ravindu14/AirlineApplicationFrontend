@@ -8,7 +8,7 @@ import Button from "components/button";
 
 import "./styles.scss";
 
-class PassengerCountPage extends Component<HomePageProps> {
+class NoShowPassengerCountPage extends Component<HomePageProps> {
   state = {
     departureMonth: null,
     flightClass: null,
@@ -27,7 +27,9 @@ class PassengerCountPage extends Component<HomePageProps> {
     return (
       <Layout>
         <div className="count-main-page">
-          <div className="count-main-page-header">Predict Passenger Count</div>
+          <div className="count-main-page-header">
+            Predict No Show Passenger Count
+          </div>
           <div className="count-main-page-container">
             <Row>
               <Col>
@@ -131,7 +133,7 @@ class PassengerCountPage extends Component<HomePageProps> {
           </div>
           {predictedCount && (
             <div className="count-main-page-prediction">
-              {`The prediction count is ${predictedCount} passenger`}
+              {`The no show prediction count is ${predictedCount} passenger`}
             </div>
           )}
         </div>
@@ -140,4 +142,4 @@ class PassengerCountPage extends Component<HomePageProps> {
   }
 }
 
-export default PassengerCountPage;
+export default NoShowPassengerCountPage;

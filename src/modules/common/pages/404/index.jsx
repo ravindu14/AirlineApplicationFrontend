@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "components/mainLayout";
+import Layout from "components/layout";
 import notFound from "assets/image/404.svg";
 
 import "./styles.scss";

@@ -8,7 +8,7 @@ import Button from "components/button";
 
 import "./styles.scss";
 
-class PassengerCountPage extends Component<HomePageProps> {
+class TicketPricingPage extends Component<HomePageProps> {
   state = {
     departureMonth: null,
     flightClass: null,
@@ -27,7 +27,7 @@ class PassengerCountPage extends Component<HomePageProps> {
     return (
       <Layout>
         <div className="count-main-page">
-          <div className="count-main-page-header">Predict Passenger Count</div>
+          <div className="count-main-page-header">Predict Ticket Pricing</div>
           <div className="count-main-page-container">
             <Row>
               <Col>
@@ -140,4 +140,4 @@ class PassengerCountPage extends Component<HomePageProps> {
   }
 }
 
-export default PassengerCountPage;
+export default TicketPricingPage;

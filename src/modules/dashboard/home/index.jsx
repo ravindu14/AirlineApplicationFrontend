@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import Layout from "components/layout";
 
 import "./styles.scss";
-import { Link } from "react-router-dom";
 
 type HomePageProps = {
   user: Object,

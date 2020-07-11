@@ -4,6 +4,7 @@ import SubMenu from "components/subMenu";
 import Link from "components/Link";
 
 import "./styles.scss";
+import Icon from "components/icon";
 
 export default function sidebar() {
   return (
@@ -14,7 +15,12 @@ export default function sidebar() {
         </Link>
       </div>
       <div className="menu">
-        <SubMenu title="Dashboard" icon="meter" onClick="/" />
+        <div className="dashboard-item">
+          <Link to="">
+            <Icon icon="meter" />
+            Dashboard
+          </Link>
+        </div>
         <SubMenu
           title="Passenger Count"
           icon="person"
@@ -33,16 +39,19 @@ export default function sidebar() {
           title="No show passengers"
           icon="bag"
           items={[
-            { title: "Predict Count", link: "/noshow/passengerCount" },
-            { title: "View History", link: "/noshow/viewPassengerHistory" },
+            { title: "Predict Count", link: "/passenger/noShowPassengerCount" },
+            {
+              title: "View History",
+              link: "/passenger/viewNoShowPassengerHistory",
+            },
           ]}
         />
         <SubMenu
           title="Ticket prices"
           icon="money"
           items={[
-            { title: "Predict Count", link: "/prices/passengerCount" },
-            { title: "View History", link: "/prices/viewPassengerHistory" },
+            { title: "Predict Count", link: "/passenger/ticketPricing" },
+            { title: "View History", link: "/passenger/viewTicketPricing" },
           ]}
         />
       </div>
